@@ -82,10 +82,10 @@ using namespace lbcrypto;
 
 // Files are expected in the executable's directory
 #define PATH_TO_FILES       "buildotests/test/" //TODO FIXME!
-#define FILE_TXT_IMG        "./weights-and-biases/txt_img_test.txt"
-#define FILE_TXT_BIASES     "./weights-and-biases/txt_biases.txt"
-#define FILE_TXT_WEIGHTS    "./weights-and-biases/txt_weights.txt"
-#define FILE_TXT_LABELS     "./weights-and-biases/txt_labels.txt"
+#define FILE_TXT_IMG        "../src/weights-and-biases/txt_img_test.txt"
+#define FILE_TXT_BIASES     "../src/weights-and-biases/txt_biases.txt"
+#define FILE_TXT_WEIGHTS    "../src/weights-and-biases/txt_weights.txt"
+#define FILE_TXT_LABELS     "../src/weights-and-biases/txt_labels.txt"
 #define FILE_LATEX          "results_LaTeX.tex"
 #define FILE_STATISTICS     "results_stats.txt"
 
