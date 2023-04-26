@@ -1,27 +1,30 @@
-# Privasea
+# Handwritting Digit Recognition Demo
 
 <p align="center">
-  <a href="https://www.privasea.tech//"><img src="https://github.com/Privasea/Miscellaneous/blob/3be7ff3c2d9f7e955e80f6637b5098fdb4583e3a/Figures/Logo/Privasea-Logo.jpg" width=40%  /></a>
+  <a href="https://www.privasea.ai"><img src="https://github.com/Privasea/Miscellaneous/blob/3be7ff3c2d9f7e955e80f6637b5098fdb4583e3a/Figures/Logo/Privasea-Logo.jpg" width=40%  /></a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Privasea"><img src="https://img.shields.io/badge/Playground-Privasea_Technology-brightgreen?logo=Parity%20Substrate" /></a>
-  <a href="https://www.privasea.tech/"><img src="https://img.shields.io/badge/made%20by-Privasea%20Tech-blue.svg?style=flat-square" /></a>
-  <a href="https://github.com/Privasea/Miscellaneous"><img src="https://img.shields.io/badge/project-Miscellaneous-yellow.svg?style=flat-square" /></a>
+  <a href="https://www.privasea.ai"><img src="https://img.shields.io/badge/made%20by-Privasea%20Tech-blue.svg?style=flat-square" /></a>
+  <a href="https://github.com/Privasea/dinn_demo"><img src="https://img.shields.io/badge/project-dinn_demo-yellow.svg?style=flat-square" /></a>
 </p>
 
-Introduction
-=====================================
 
-Privasea is a cutting-edge privacy computing solution that leverages decentralized technology to ensure data security and protect user privacy. It utilizes AI models to process sensitive information in a secure and confidential manner. Privasea's unique architecture is easy to scale up with computation crowdsourcing, making it an ideal solution for organizations of all sizes looking to maintain the privacy of their data.
+# Table of Contents
 
-This repository will serve as a toolbox to store useful sources such as figures or documents which would be used for other privasea repository.
+- [Introduction](#introduction)
+- [Running](#running)
+- [Remark](#remark)
+
+## Introduction
+
+This is a demonstration for secure handwritting digit recognition using [HESEA library](https://github.com/Privasea/HESEA_Lib). We use the scheme describe on the paper [Fast Homomorphic Evaluation of Deep Discretized Neural Networks](https://eprint.iacr.org/2017/1114.pdf). It presents an approach for privacy-preserving deep learning using the TFHE encryption scheme. The main advantage of DINN is that it achieves competitive accuracy while maintaining normal operational efficiency thanks to its innovative use of Discretized Neural Networks. These networks quantize the weights and biases, reducing the complexity of the underlying computations and simplifying the TFHE bootstrapping procedure. As a result, the homomorphic evaluation is further improved, leading to enhanced efficiency.
+
+In this demo, the client first homomorphically encrypt a handwritten digital image locally and then transmit the encrypted data to the server. Upon receiving the ciphertext, the server runs the neural network recognition algorithm in the ciphertext domain, obtains the encrypted recognition result, and returns it to the client. The client can then decrypt the encrypted recognition result to obtain the correct output.
 
 
-# dinn_demo
-
-
-# How to run in ubuntu
+# Running
 
 Dependencies:
 
@@ -44,3 +47,7 @@ cmake ..
 make
 ./dinn_demo
 ```
+
+# Remark
+This is only a demostration for handwritting digit recognition and please do not use it in any mature product.
+
